@@ -36,7 +36,7 @@ class Detalle {
 
 public class Main {
     public static void main(String[] args) {
-        e32();
+        e30();
     }
 
     static void e32() {
@@ -77,6 +77,54 @@ public class Main {
         System.out.println("el máximo es : " + max);
         System.out.println("el mínimo es : " + min);
 
+    }
+
+    static void e30() {
+        /*
+         * Crea una función que reciba un texto y muestre cada palabra en una línea,
+         * formando un marco rectangular de asteriscos.
+         * - ¿Qué te parece el reto? Se vería así:
+         *   **********
+         *   * ¿Qué   *
+         *   * te     *
+         *   * parece *
+         *   * el     *
+         *   * reto?  *
+         *   **********
+         */
+        String[] palabras = new String[0];
+        String p = "";
+        Scanner s = new Scanner(System.in);
+        int maxLen = 0;
+        System.out.println("ingrese una frase");
+        p = s.nextLine();
+        palabras = p.split(" ");
+        maxLen = palabras[0].length();
+//      got the largest word
+        for (int i = 0; i < palabras.length; i++) {
+            if (palabras[i].length() > maxLen) {
+                maxLen = palabras[i].length();
+            }
+        }
+
+
+        for (int i = 0; i < maxLen + 2; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        for (int i = 0; i < palabras.length; i++) {
+            String res = "";
+            res = res + "*" + palabras[i];
+            for (int j = 0; j < (maxLen - palabras[i].length()); j++) {
+                res = res + " ";
+            }
+            res = res + "*";
+            System.out.println(res);
+        }
+
+        for (int i = 0; i < maxLen + 2; i++) {
+            System.out.print("*");
+        }
     }
 
     static void e27() {
