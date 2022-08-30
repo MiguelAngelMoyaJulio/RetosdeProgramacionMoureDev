@@ -70,7 +70,22 @@ public class Main {
         e29();
     }
 
-
+    static void e35() {
+        /*
+         * Enunciado: Crea un programa que calcule el daño de un ataque durante
+         * una batalla Pokémon.
+         * - La fórmula será la siguiente: daño = 50 * (ataque / defensa) * efectividad
+         * - Efectividad: x2 (súper efectivo), x1 (neutral), x0.5 (no es muy efectivo)
+         * - Sólo hay 4 tipos de Pokémon: Agua, Fuego, Planta y Eléctrico
+         *   (buscar su efectividad)
+         * - El programa recibe los siguientes parámetros:
+         *  - Tipo del Pokémon atacante.
+         *  - Tipo del Pokémon defensor.
+         *  - Ataque: Entre 1 y 100.
+         *  - Defensa: Entre 1 y 100.
+         */
+        
+    }
     static void e34() {
         /*
          * Enunciado: Dado un array de enteros ordenado y sin repetidos,
@@ -437,7 +452,7 @@ public class Main {
         return n;
     }
 
-    static void e20() {
+    static void e18() {
         /*
          * Crea una función que analice una matriz 3x3 compuesta por "X" y "O"
          * y retorne lo siguiente:
@@ -861,7 +876,7 @@ public class Main {
         return f;
     }
 
-    static void e7() {
+    static void e8() {
         String p = "";
         StringBuilder sb = new StringBuilder("");
         int c = 0;
@@ -884,7 +899,7 @@ public class Main {
         System.out.println("numero binario : " + sb.reverse());
     }
 
-    static void e6() {
+    static void e7() {
         Scanner s = new Scanner(System.in);
         String p = "";
         String[] listado = new String[0];
@@ -907,7 +922,7 @@ public class Main {
         }
     }
 
-    static void e5() {
+    static void e6() {
         /*
          * Crea un programa que invierta el orden de una cadena de texto
          * sin usar funciones propias del lenguaje que lo hagan de forma automática.
