@@ -8,6 +8,7 @@ import java.lang.reflect.Array;
 import java.net.Inet4Address;
 import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.sql.SQLOutput;
+import java.text.DecimalFormat;
 import java.util.*;
 
 class Juego {
@@ -67,7 +68,7 @@ class Detalle {
 
 public class Main {
     public static void main(String[] args) {
-        e29();
+        e35();
     }
 
     static void e35() {
@@ -84,8 +85,138 @@ public class Main {
          *  - Ataque: Entre 1 y 100.
          *  - Defensa: Entre 1 y 100.
          */
-        
+        DecimalFormat df = new DecimalFormat("#.##");
+        Scanner s = new Scanner(System.in);
+        String atacante = "";
+        String defensa = "";
+        double ataque = 0;
+        double defe = 0;
+        double daño = 0;
+
+        System.out.println("Ataque : ingrese el tipo del pokemon atancante y la cantidad");
+        atacante = s.nextLine();
+        ataque = Double.parseDouble(s.nextLine());
+        System.out.println("Defensa : ingrese el tipo del pokemon y la cantidad");
+        defensa = s.nextLine();
+        defe = Double.parseDouble(s.nextLine());
+
+//        agua
+        if (atacante.equalsIgnoreCase("agua") && defensa.equalsIgnoreCase("agua")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("agua") && defensa.equalsIgnoreCase("fuego")) {
+            daño = (50 * (ataque / defe) * 2);
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("agua") && defensa.equalsIgnoreCase("planta")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("agua") && defensa.equalsIgnoreCase("electrico")) {
+            daño = 50 * (ataque / defe) * 1;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        //        fuego
+        if (atacante.equalsIgnoreCase("fuego") && defensa.equalsIgnoreCase("agua")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("fuego") && defensa.equalsIgnoreCase("fuego")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("fuego") && defensa.equalsIgnoreCase("planta")) {
+            daño = 50 * (ataque / defe) * 2;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("fuego") && defensa.equalsIgnoreCase("electrico")) {
+            daño = 50 * (ataque / defe) * 1;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        //        electrico
+        if (atacante.equalsIgnoreCase("electrico") && defensa.equalsIgnoreCase("agua")) {
+            daño = 50 * (ataque / defe) * 2;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("electrico") && defensa.equalsIgnoreCase("fuego")) {
+            daño = 50 * (ataque / defe) * 1;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("electrico") && defensa.equalsIgnoreCase("planta")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("electrico") && defensa.equalsIgnoreCase("electrico")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+        //        planta
+        if (atacante.equalsIgnoreCase("planta") && defensa.equalsIgnoreCase("agua")) {
+            daño = 50 * (ataque / defe) * 2;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("planta") && defensa.equalsIgnoreCase("fuego")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("planta") && defensa.equalsIgnoreCase("planta")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
+        if (atacante.equalsIgnoreCase("planta") && defensa.equalsIgnoreCase("electrico")) {
+            daño = 50 * (ataque / defe) * 0.5;
+            System.out.println("Tipo atacante : " + atacante);
+            System.out.println("Tipo defensa : " + defensa);
+            System.out.println("daño causado : " + df.format(daño));
+        }
+
     }
+
     static void e34() {
         /*
          * Enunciado: Dado un array de enteros ordenado y sin repetidos,
@@ -238,8 +369,8 @@ public class Main {
         }
 
 
-        for (int i = 0; i < numeros.length-1; i++) {
-            for (int j = 0; j < numeros.length-1; j++) {
+        for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = 0; j < numeros.length - 1; j++) {
                 if (numeros[j] > numeros[j + 1]) {
                     aux = numeros[j];
                     numeros[j] = numeros[j + 1];
