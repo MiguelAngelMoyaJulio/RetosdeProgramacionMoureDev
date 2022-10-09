@@ -1,7 +1,5 @@
 package org.ar.miguel.E25;
 
-import org.ar.miguel.Juego;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
