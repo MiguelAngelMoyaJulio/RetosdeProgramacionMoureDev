@@ -1,7 +1,12 @@
 package org.ar.miguel.E47;
 
 import java.util.Scanner;
-
+/*
+ * Enunciado: Crea un función que reciba un texto y retorne la vocal que
+ * más veces se repita.
+ * - Ten cuidado con algunos casos especiales.
+ * - Si no hay vocales podrá devolver vacío.
+ */
 public class E47 {
     public static void main(String[] args) {
         String[] vocalesVector = {"a", "e", "i", "o", "u"};
